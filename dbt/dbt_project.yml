@@ -1,0 +1,55 @@
+version: 2 
+
+name: 'massive_hotel'
+version: '1.0.0'
+config-version: 2
+
+profile: 'massive_hotel'
+
+sources:
+  customer_raw_data:
+    +enabled: true
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+asset-paths: ["assets"]
+clean-targets:         # directories to be removed by `dbt clean`
+    - "target"
+    - "dbt_modules"
+    - "dbt_packages"
+
+vars:
+
+models:
+  +on_schema_change: "sync_all_columns"
+  +materialized: incremental
+  +database: massive_hotel
+
+  massive_hotel:
+    silver:
+      +incremental_startegy: append
+      +schema: silver
+    gold:
+      +incremental_startegy: merge
+      +schema: gold
+
+  # massive_hotel:
+  #   staging:
+  #     +materialized: view
+
+  #   marts:
+  #     core:
+  #       +materialized: table
+  #   ml:
+  #     +enabled: false
+
+# seeds:
+#   massive_hotel:
+#     snowflake_contract_rates:
+#       +column_types:
+#         effective_date: DATE
+#         rate: NUMBER

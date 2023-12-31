@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: customer_raw_data
+    database: massive_hotel
+    schema: bronze
+    tables:
+      - name: customer_raw_data
+        description: '{{ doc("customer_raw_data") }}'
+

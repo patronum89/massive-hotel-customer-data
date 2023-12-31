@@ -1,0 +1,28 @@
+version: 2
+
+massive_hotel:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: KEVLJLA-OX41936
+      user: DBT_USER
+      password: DBT_Login_123
+      role: S3_ROLE
+      database: MASSIVE_ROCKET
+      scheam: SILVER
+      warehouse: DBT_USAGE_WH
+      threads: 4
+
+  target: prod
+  outputs:
+    prod:
+      type: snowflake
+      account: KEVLJLA-OX41936
+      user: DBT_USER
+      password: DBT_Login_123
+      role: S3_ROLE
+      database: MASSIVE_ROCKET
+      warehouse: DBT_USAGE_WH
+      schema: GOLD
+      threads: 4
