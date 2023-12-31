@@ -4221,3 +4221,605 @@ drop view if exists massive_hotel.gold.customer_data__dbt_tmp cascade
 [0m16:57:41.870656 [debug] [MainThread]: Command `dbt run` succeeded at 16:57:41.870656 after 5.96 seconds
 [0m16:57:41.870656 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000230DAFE4DA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000230DBF57E60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000230DBB39A60>]}
 [0m16:57:41.870656 [debug] [MainThread]: Flushing usage events
+[0m18:15:07.976103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FEC33BCE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FEC33A450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FEC33AB40>]}
+
+
+============================== 18:15:07.991862 | 4278ed8d-ea45-4700-a769-cb0d8e47606a ==============================
+[0m18:15:07.991862 [info ] [MainThread]: Running with dbt=1.7.4
+[0m18:15:07.991862 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'E:\\Code\\massive-hotel-customer-data\\dbt\\logs', 'fail_fast': 'False', 'profiles_dir': 'E:\\Code\\massive-hotel-customer-data\\dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt docs generate', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m18:15:09.021062 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4278ed8d-ea45-4700-a769-cb0d8e47606a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FEC9416A0>]}
+[0m18:15:09.137253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4278ed8d-ea45-4700-a769-cb0d8e47606a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FEDC0A150>]}
+[0m18:15:09.137253 [info ] [MainThread]: Registered adapter: snowflake=1.7.1
+[0m18:15:09.152242 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m18:15:09.367655 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m18:15:09.367655 [debug] [MainThread]: Partial parsing: added file: massive_hotel://models\docker-compose.override.yml
+[0m18:15:09.367655 [debug] [MainThread]: Partial parsing: added file: massive_hotel://macros\drop_table.sql
+[0m18:15:09.437139 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- sources.customer_raw_data
+[0m18:15:09.441606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4278ed8d-ea45-4700-a769-cb0d8e47606a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FEDC0B5C0>]}
+[0m18:15:09.441606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4278ed8d-ea45-4700-a769-cb0d8e47606a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FEDCC47A0>]}
+[0m18:15:09.441606 [info ] [MainThread]: Found 2 models, 4 tests, 1 source, 0 exposures, 0 metrics, 435 macros, 0 groups, 0 semantic models
+[0m18:15:09.449876 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4278ed8d-ea45-4700-a769-cb0d8e47606a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FEDCC42C0>]}
+[0m18:15:09.451886 [info ] [MainThread]: 
+[0m18:15:09.451886 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:15:09.451886 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel_silver'
+[0m18:15:09.467549 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel_gold'
+[0m18:15:09.473453 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel_silver"
+[0m18:15:09.473453 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel_gold"
+[0m18:15:09.473453 [debug] [ThreadPool]: On list_massive_hotel_silver: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel_silver"} */
+show terse objects in massive_hotel.silver limit 10000
+[0m18:15:09.473453 [debug] [ThreadPool]: On list_massive_hotel_gold: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel_gold"} */
+show terse objects in massive_hotel.gold limit 10000
+[0m18:15:09.473453 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:15:09.473453 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:15:11.165398 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m18:15:11.183505 [debug] [ThreadPool]: On list_massive_hotel_gold: Close
+[0m18:15:11.184502 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.0 seconds
+[0m18:15:11.188544 [debug] [ThreadPool]: On list_massive_hotel_silver: Close
+[0m18:15:11.499396 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4278ed8d-ea45-4700-a769-cb0d8e47606a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FEDDD5790>]}
+[0m18:15:11.505161 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m18:15:11.508222 [info ] [MainThread]: 
+[0m18:15:11.519998 [debug] [Thread-1 (]: Began running node model.massive_hotel.staging_customer_data
+[0m18:15:11.519998 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.massive_hotel.staging_customer_data'
+[0m18:15:11.519998 [debug] [Thread-1 (]: Began compiling node model.massive_hotel.staging_customer_data
+[0m18:15:11.534574 [debug] [Thread-1 (]: Using snowflake connection "model.massive_hotel.staging_customer_data"
+[0m18:15:11.534574 [debug] [Thread-1 (]: On model.massive_hotel.staging_customer_data: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "node_id": "model.massive_hotel.staging_customer_data"} */
+with low_level_flatten as (
+	select f.key as json_key, f.path as json_path, 
+	f.value as json_value
+	from massive_hotel.bronze.customer_raw_data, 
+	lateral flatten(input => record_content, recursive => true ) f
+)
+
+	
+	
+	select distinct json_path
+	from low_level_flatten
+	where not contains(json_value, '{')
+[0m18:15:11.534574 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:15:12.853486 [debug] [Thread-1 (]: SQL status: SUCCESS 20 in 1.0 seconds
+[0m18:15:12.858596 [debug] [Thread-1 (]: Writing injected SQL for node "model.massive_hotel.staging_customer_data"
+[0m18:15:12.858596 [debug] [Thread-1 (]: Timing info for model.massive_hotel.staging_customer_data (compile): 18:15:11.519998 => 18:15:12.858596
+[0m18:15:12.868092 [debug] [Thread-1 (]: Began executing node model.massive_hotel.staging_customer_data
+[0m18:15:12.869089 [debug] [Thread-1 (]: Timing info for model.massive_hotel.staging_customer_data (execute): 18:15:12.868092 => 18:15:12.868092
+[0m18:15:12.869089 [debug] [Thread-1 (]: On model.massive_hotel.staging_customer_data: Close
+[0m18:15:13.014160 [debug] [Thread-1 (]: Finished running node model.massive_hotel.staging_customer_data
+[0m18:15:13.014160 [debug] [Thread-3 (]: Began running node model.massive_hotel.customer_data
+[0m18:15:13.014160 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.massive_hotel.customer_data'
+[0m18:15:13.014160 [debug] [Thread-3 (]: Began compiling node model.massive_hotel.customer_data
+[0m18:15:13.029695 [debug] [Thread-3 (]: Writing injected SQL for node "model.massive_hotel.customer_data"
+[0m18:15:13.029695 [debug] [Thread-3 (]: Timing info for model.massive_hotel.customer_data (compile): 18:15:13.014160 => 18:15:13.029695
+[0m18:15:13.029695 [debug] [Thread-3 (]: Began executing node model.massive_hotel.customer_data
+[0m18:15:13.029695 [debug] [Thread-3 (]: Timing info for model.massive_hotel.customer_data (execute): 18:15:13.029695 => 18:15:13.029695
+[0m18:15:13.029695 [debug] [Thread-3 (]: Finished running node model.massive_hotel.customer_data
+[0m18:15:13.029695 [debug] [Thread-2 (]: Began running node test.massive_hotel.not_null_customer_data_email.c13ae94780
+[0m18:15:13.029695 [debug] [Thread-1 (]: Began running node test.massive_hotel.not_null_customer_data_first_name.992883872d
+[0m18:15:13.029695 [debug] [Thread-4 (]: Began running node test.massive_hotel.not_null_customer_data_id.30a04e076c
+[0m18:15:13.029695 [debug] [Thread-3 (]: Began running node test.massive_hotel.unique_customer_data_id.cc6f0ac84c
+[0m18:15:13.029695 [debug] [Thread-2 (]: Acquiring new snowflake connection 'test.massive_hotel.not_null_customer_data_email.c13ae94780'
+[0m18:15:13.029695 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.massive_hotel.staging_customer_data, now test.massive_hotel.not_null_customer_data_first_name.992883872d)
+[0m18:15:13.045273 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.massive_hotel.not_null_customer_data_id.30a04e076c'
+[0m18:15:13.045273 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.massive_hotel.customer_data, now test.massive_hotel.unique_customer_data_id.cc6f0ac84c)
+[0m18:15:13.045273 [debug] [Thread-2 (]: Began compiling node test.massive_hotel.not_null_customer_data_email.c13ae94780
+[0m18:15:13.045273 [debug] [Thread-1 (]: Began compiling node test.massive_hotel.not_null_customer_data_first_name.992883872d
+[0m18:15:13.045273 [debug] [Thread-4 (]: Began compiling node test.massive_hotel.not_null_customer_data_id.30a04e076c
+[0m18:15:13.045273 [debug] [Thread-3 (]: Began compiling node test.massive_hotel.unique_customer_data_id.cc6f0ac84c
+[0m18:15:13.061287 [debug] [Thread-2 (]: Writing injected SQL for node "test.massive_hotel.not_null_customer_data_email.c13ae94780"
+[0m18:15:13.061287 [debug] [Thread-1 (]: Writing injected SQL for node "test.massive_hotel.not_null_customer_data_first_name.992883872d"
+[0m18:15:13.061287 [debug] [Thread-4 (]: Writing injected SQL for node "test.massive_hotel.not_null_customer_data_id.30a04e076c"
+[0m18:15:13.076946 [debug] [Thread-3 (]: Writing injected SQL for node "test.massive_hotel.unique_customer_data_id.cc6f0ac84c"
+[0m18:15:13.076946 [debug] [Thread-4 (]: Timing info for test.massive_hotel.not_null_customer_data_id.30a04e076c (compile): 18:15:13.061287 => 18:15:13.076946
+[0m18:15:13.076946 [debug] [Thread-2 (]: Timing info for test.massive_hotel.not_null_customer_data_email.c13ae94780 (compile): 18:15:13.045273 => 18:15:13.076946
+[0m18:15:13.076946 [debug] [Thread-4 (]: Began executing node test.massive_hotel.not_null_customer_data_id.30a04e076c
+[0m18:15:13.076946 [debug] [Thread-1 (]: Timing info for test.massive_hotel.not_null_customer_data_first_name.992883872d (compile): 18:15:13.061287 => 18:15:13.076946
+[0m18:15:13.076946 [debug] [Thread-3 (]: Timing info for test.massive_hotel.unique_customer_data_id.cc6f0ac84c (compile): 18:15:13.061287 => 18:15:13.076946
+[0m18:15:13.076946 [debug] [Thread-2 (]: Began executing node test.massive_hotel.not_null_customer_data_email.c13ae94780
+[0m18:15:13.076946 [debug] [Thread-4 (]: Timing info for test.massive_hotel.not_null_customer_data_id.30a04e076c (execute): 18:15:13.076946 => 18:15:13.076946
+[0m18:15:13.076946 [debug] [Thread-1 (]: Began executing node test.massive_hotel.not_null_customer_data_first_name.992883872d
+[0m18:15:13.076946 [debug] [Thread-3 (]: Began executing node test.massive_hotel.unique_customer_data_id.cc6f0ac84c
+[0m18:15:13.076946 [debug] [Thread-2 (]: Timing info for test.massive_hotel.not_null_customer_data_email.c13ae94780 (execute): 18:15:13.076946 => 18:15:13.076946
+[0m18:15:13.076946 [debug] [Thread-4 (]: Finished running node test.massive_hotel.not_null_customer_data_id.30a04e076c
+[0m18:15:13.092546 [debug] [Thread-1 (]: Timing info for test.massive_hotel.not_null_customer_data_first_name.992883872d (execute): 18:15:13.092546 => 18:15:13.092546
+[0m18:15:13.092546 [debug] [Thread-3 (]: Timing info for test.massive_hotel.unique_customer_data_id.cc6f0ac84c (execute): 18:15:13.092546 => 18:15:13.092546
+[0m18:15:13.092546 [debug] [Thread-2 (]: Finished running node test.massive_hotel.not_null_customer_data_email.c13ae94780
+[0m18:15:13.092546 [debug] [Thread-1 (]: Finished running node test.massive_hotel.not_null_customer_data_first_name.992883872d
+[0m18:15:13.092546 [debug] [Thread-3 (]: Finished running node test.massive_hotel.unique_customer_data_id.cc6f0ac84c
+[0m18:15:13.092546 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:15:13.092546 [debug] [MainThread]: Connection 'list_massive_hotel_silver' was properly closed.
+[0m18:15:13.092546 [debug] [MainThread]: Connection 'list_massive_hotel_gold' was properly closed.
+[0m18:15:13.092546 [debug] [MainThread]: Connection 'test.massive_hotel.not_null_customer_data_first_name.992883872d' was properly closed.
+[0m18:15:13.092546 [debug] [MainThread]: Connection 'test.massive_hotel.unique_customer_data_id.cc6f0ac84c' was properly closed.
+[0m18:15:13.092546 [debug] [MainThread]: Connection 'test.massive_hotel.not_null_customer_data_email.c13ae94780' was properly closed.
+[0m18:15:13.092546 [debug] [MainThread]: Connection 'test.massive_hotel.not_null_customer_data_id.30a04e076c' was properly closed.
+[0m18:15:13.092546 [debug] [MainThread]: Command end result
+[0m18:15:13.108220 [debug] [MainThread]: Acquiring new snowflake connection 'generate_catalog'
+[0m18:15:13.108220 [info ] [MainThread]: Building catalog
+[0m18:15:13.123795 [debug] [ThreadPool]: Acquiring new snowflake connection 'massive_hotel.information_schema'
+[0m18:15:13.123795 [debug] [ThreadPool]: Using snowflake connection "massive_hotel.information_schema"
+[0m18:15:13.123795 [debug] [ThreadPool]: On massive_hotel.information_schema: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "massive_hotel.information_schema"} */
+with tables as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+        coalesce(table_type, 'DYNAMIC TABLE') as "table_type",
+        comment as "table_comment",
+
+        -- note: this is the _role_ that owns the table
+        table_owner as "table_owner",
+
+        'Clustering Key' as "stats:clustering_key:label",
+        clustering_key as "stats:clustering_key:value",
+        'The key used to cluster this table' as "stats:clustering_key:description",
+        (clustering_key is not null) as "stats:clustering_key:include",
+
+        'Row Count' as "stats:row_count:label",
+        row_count as "stats:row_count:value",
+        'An approximate count of rows in this table' as "stats:row_count:description",
+        (row_count is not null) as "stats:row_count:include",
+
+        'Approximate Size' as "stats:bytes:label",
+        bytes as "stats:bytes:value",
+        'Approximate size of the table as reported by Snowflake' as "stats:bytes:description",
+        (bytes is not null) as "stats:bytes:include",
+
+        'Last Modified' as "stats:last_modified:label",
+        to_varchar(convert_timezone('UTC', last_altered), 'yyyy-mm-dd HH24:MI'||'UTC') as "stats:last_modified:value",
+        'The timestamp for last update/change' as "stats:last_modified:description",
+        (last_altered is not null and table_type='BASE TABLE') as "stats:last_modified:include"
+    from massive_hotel.INFORMATION_SCHEMA.tables
+            where (
+                (
+                    upper("table_schema") = upper('gold')
+                    and upper("table_name") = upper('customer_data')
+                )
+             or 
+                (
+                    upper("table_schema") = upper('bronze')
+                    and upper("table_name") = upper('customer_raw_data')
+                )
+             or 
+                (
+                    upper("table_schema") = upper('silver')
+                    and upper("table_name") = upper('staging_customer_data')
+                )
+            )
+        ),
+        columns as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+
+        column_name as "column_name",
+        ordinal_position as "column_index",
+        data_type as "column_type",
+        comment as "column_comment"
+    from massive_hotel.INFORMATION_SCHEMA.columns
+            where (
+                (
+                    upper("table_schema") = upper('gold')
+                    and upper("table_name") = upper('customer_data')
+                )
+             or 
+                (
+                    upper("table_schema") = upper('bronze')
+                    and upper("table_name") = upper('customer_raw_data')
+                )
+             or 
+                (
+                    upper("table_schema") = upper('silver')
+                    and upper("table_name") = upper('staging_customer_data')
+                )
+            )
+        )
+        select *
+    from tables
+    join columns using ("table_database", "table_schema", "table_name")
+    order by "column_index"
+[0m18:15:13.123795 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:15:19.065649 [debug] [ThreadPool]: SQL status: SUCCESS 41 in 6.0 seconds
+[0m18:15:19.076221 [debug] [ThreadPool]: On massive_hotel.information_schema: Close
+[0m18:15:19.250812 [info ] [MainThread]: Catalog written to E:\Code\massive-hotel-customer-data\dbt\target\catalog.json
+[0m18:15:19.250812 [debug] [MainThread]: Command `dbt docs generate` succeeded at 18:15:19.250812 after 11.37 seconds
+[0m18:15:19.250812 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m18:15:19.250812 [debug] [MainThread]: Connection 'massive_hotel.information_schema' was properly closed.
+[0m18:15:19.250812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FEBCB9A00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FEDBDACC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FEDC342C0>]}
+[0m18:15:19.250812 [debug] [MainThread]: Flushing usage events
+[0m18:45:55.987846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017D2BFBB770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017D2BFBAD20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017D2BFB9B80>]}
+
+
+============================== 18:45:56.006287 | 4c0a3155-1d4e-495a-8615-42ac4ff7714a ==============================
+[0m18:45:56.006287 [info ] [MainThread]: Running with dbt=1.7.4
+[0m18:45:56.014485 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'E:\\Code\\massive-hotel-customer-data\\dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'E:\\Code\\massive-hotel-customer-data\\dbt\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt test', 'send_anonymous_usage_stats': 'True'}
+[0m18:45:57.389876 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4c0a3155-1d4e-495a-8615-42ac4ff7714a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017D2C66FF50>]}
+[0m18:45:57.697713 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4c0a3155-1d4e-495a-8615-42ac4ff7714a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017D2C63DD30>]}
+[0m18:45:57.703426 [info ] [MainThread]: Registered adapter: snowflake=1.7.1
+[0m18:45:57.727952 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m18:45:57.959598 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:45:57.959598 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:45:57.959598 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- sources.customer_raw_data
+[0m18:45:57.983425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4c0a3155-1d4e-495a-8615-42ac4ff7714a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017D2D7A5760>]}
+[0m18:45:58.096052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4c0a3155-1d4e-495a-8615-42ac4ff7714a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017D2D8DCB30>]}
+[0m18:45:58.096052 [info ] [MainThread]: Found 2 models, 4 tests, 1 source, 0 exposures, 0 metrics, 435 macros, 0 groups, 0 semantic models
+[0m18:45:58.104347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4c0a3155-1d4e-495a-8615-42ac4ff7714a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017D24C0F2C0>]}
+[0m18:45:58.104347 [info ] [MainThread]: 
+[0m18:45:58.115644 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:45:58.120842 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel_silver'
+[0m18:45:58.125721 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel_gold'
+[0m18:45:58.182500 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel_silver"
+[0m18:45:58.191786 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel_gold"
+[0m18:45:58.191786 [debug] [ThreadPool]: On list_massive_hotel_silver: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel_silver"} */
+show terse objects in massive_hotel.silver limit 10000
+[0m18:45:58.196851 [debug] [ThreadPool]: On list_massive_hotel_gold: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel_gold"} */
+show terse objects in massive_hotel.gold limit 10000
+[0m18:45:58.196851 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:45:58.196851 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:46:00.751155 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m18:46:00.767484 [debug] [ThreadPool]: On list_massive_hotel_gold: Close
+[0m18:46:00.807396 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 3.0 seconds
+[0m18:46:00.816027 [debug] [ThreadPool]: On list_massive_hotel_silver: Close
+[0m18:46:01.000508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4c0a3155-1d4e-495a-8615-42ac4ff7714a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017D2D8DE300>]}
+[0m18:46:01.010151 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m18:46:01.012869 [info ] [MainThread]: 
+[0m18:46:01.043694 [debug] [Thread-1 (]: Began running node test.massive_hotel.not_null_customer_data_email.c13ae94780
+[0m18:46:01.046221 [debug] [Thread-2 (]: Began running node test.massive_hotel.not_null_customer_data_first_name.992883872d
+[0m18:46:01.054258 [debug] [Thread-3 (]: Began running node test.massive_hotel.not_null_customer_data_id.30a04e076c
+[0m18:46:01.059022 [debug] [Thread-4 (]: Began running node test.massive_hotel.unique_customer_data_id.cc6f0ac84c
+[0m18:46:01.062567 [info ] [Thread-1 (]: 1 of 4 START test not_null_customer_data_email ................................. [RUN]
+[0m18:46:01.062567 [info ] [Thread-2 (]: 2 of 4 START test not_null_customer_data_first_name ............................ [RUN]
+[0m18:46:01.071939 [info ] [Thread-3 (]: 3 of 4 START test not_null_customer_data_id .................................... [RUN]
+[0m18:46:01.079557 [info ] [Thread-4 (]: 4 of 4 START test unique_customer_data_id ...................................... [RUN]
+[0m18:46:01.087083 [debug] [Thread-1 (]: Acquiring new snowflake connection 'test.massive_hotel.not_null_customer_data_email.c13ae94780'
+[0m18:46:01.095500 [debug] [Thread-2 (]: Acquiring new snowflake connection 'test.massive_hotel.not_null_customer_data_first_name.992883872d'
+[0m18:46:01.103520 [debug] [Thread-3 (]: Acquiring new snowflake connection 'test.massive_hotel.not_null_customer_data_id.30a04e076c'
+[0m18:46:01.107896 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.massive_hotel.unique_customer_data_id.cc6f0ac84c'
+[0m18:46:01.111911 [debug] [Thread-1 (]: Began compiling node test.massive_hotel.not_null_customer_data_email.c13ae94780
+[0m18:46:01.111911 [debug] [Thread-2 (]: Began compiling node test.massive_hotel.not_null_customer_data_first_name.992883872d
+[0m18:46:01.111911 [debug] [Thread-3 (]: Began compiling node test.massive_hotel.not_null_customer_data_id.30a04e076c
+[0m18:46:01.119930 [debug] [Thread-4 (]: Began compiling node test.massive_hotel.unique_customer_data_id.cc6f0ac84c
+[0m18:46:01.211932 [debug] [Thread-1 (]: Writing injected SQL for node "test.massive_hotel.not_null_customer_data_email.c13ae94780"
+[0m18:46:01.217015 [debug] [Thread-2 (]: Writing injected SQL for node "test.massive_hotel.not_null_customer_data_first_name.992883872d"
+[0m18:46:01.241538 [debug] [Thread-3 (]: Writing injected SQL for node "test.massive_hotel.not_null_customer_data_id.30a04e076c"
+[0m18:46:01.267456 [debug] [Thread-4 (]: Writing injected SQL for node "test.massive_hotel.unique_customer_data_id.cc6f0ac84c"
+[0m18:46:01.274717 [debug] [Thread-1 (]: Timing info for test.massive_hotel.not_null_customer_data_email.c13ae94780 (compile): 18:46:01.121863 => 18:46:01.273965
+[0m18:46:01.277812 [debug] [Thread-2 (]: Timing info for test.massive_hotel.not_null_customer_data_first_name.992883872d (compile): 18:46:01.194359 => 18:46:01.277812
+[0m18:46:01.283348 [debug] [Thread-1 (]: Began executing node test.massive_hotel.not_null_customer_data_email.c13ae94780
+[0m18:46:01.284521 [debug] [Thread-2 (]: Began executing node test.massive_hotel.not_null_customer_data_first_name.992883872d
+[0m18:46:01.288797 [debug] [Thread-3 (]: Timing info for test.massive_hotel.not_null_customer_data_id.30a04e076c (compile): 18:46:01.217015 => 18:46:01.286574
+[0m18:46:01.291322 [debug] [Thread-4 (]: Timing info for test.massive_hotel.unique_customer_data_id.cc6f0ac84c (compile): 18:46:01.243179 => 18:46:01.291202
+[0m18:46:01.371073 [debug] [Thread-2 (]: Writing runtime sql for node "test.massive_hotel.not_null_customer_data_first_name.992883872d"
+[0m18:46:01.379484 [debug] [Thread-1 (]: Writing runtime sql for node "test.massive_hotel.not_null_customer_data_email.c13ae94780"
+[0m18:46:01.379484 [debug] [Thread-3 (]: Began executing node test.massive_hotel.not_null_customer_data_id.30a04e076c
+[0m18:46:01.379484 [debug] [Thread-4 (]: Began executing node test.massive_hotel.unique_customer_data_id.cc6f0ac84c
+[0m18:46:01.395747 [debug] [Thread-3 (]: Writing runtime sql for node "test.massive_hotel.not_null_customer_data_id.30a04e076c"
+[0m18:46:01.408409 [debug] [Thread-1 (]: Using snowflake connection "test.massive_hotel.not_null_customer_data_email.c13ae94780"
+[0m18:46:01.412090 [debug] [Thread-2 (]: Using snowflake connection "test.massive_hotel.not_null_customer_data_first_name.992883872d"
+[0m18:46:01.420111 [debug] [Thread-4 (]: Writing runtime sql for node "test.massive_hotel.unique_customer_data_id.cc6f0ac84c"
+[0m18:46:01.424957 [debug] [Thread-1 (]: On test.massive_hotel.not_null_customer_data_email.c13ae94780: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "node_id": "test.massive_hotel.not_null_customer_data_email.c13ae94780"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select email
+from massive_hotel.gold.customer_data
+where email is null
+
+
+
+      
+    ) dbt_internal_test
+[0m18:46:01.424957 [debug] [Thread-2 (]: On test.massive_hotel.not_null_customer_data_first_name.992883872d: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "node_id": "test.massive_hotel.not_null_customer_data_first_name.992883872d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select first_name
+from massive_hotel.gold.customer_data
+where first_name is null
+
+
+
+      
+    ) dbt_internal_test
+[0m18:46:01.428473 [debug] [Thread-3 (]: Using snowflake connection "test.massive_hotel.not_null_customer_data_id.30a04e076c"
+[0m18:46:01.428473 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:46:01.428473 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m18:46:01.436506 [debug] [Thread-4 (]: Using snowflake connection "test.massive_hotel.unique_customer_data_id.cc6f0ac84c"
+[0m18:46:01.441664 [debug] [Thread-3 (]: On test.massive_hotel.not_null_customer_data_id.30a04e076c: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "node_id": "test.massive_hotel.not_null_customer_data_id.30a04e076c"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from massive_hotel.gold.customer_data
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m18:46:01.457237 [debug] [Thread-4 (]: On test.massive_hotel.unique_customer_data_id.cc6f0ac84c: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "node_id": "test.massive_hotel.unique_customer_data_id.cc6f0ac84c"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from massive_hotel.gold.customer_data
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m18:46:01.461160 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m18:46:01.463353 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m18:46:05.344129 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 4.0 seconds
+[0m18:46:05.377445 [debug] [Thread-2 (]: Timing info for test.massive_hotel.not_null_customer_data_first_name.992883872d (execute): 18:46:01.355365 => 18:46:05.376392
+[0m18:46:05.379879 [debug] [Thread-2 (]: On test.massive_hotel.not_null_customer_data_first_name.992883872d: Close
+[0m18:46:05.554444 [info ] [Thread-2 (]: 2 of 4 PASS not_null_customer_data_first_name .................................. [[32mPASS[0m in 4.46s]
+[0m18:46:05.561593 [debug] [Thread-2 (]: Finished running node test.massive_hotel.not_null_customer_data_first_name.992883872d
+[0m18:46:06.163671 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 5.0 seconds
+[0m18:46:06.182733 [debug] [Thread-1 (]: Timing info for test.massive_hotel.not_null_customer_data_email.c13ae94780 (execute): 18:46:01.291322 => 18:46:06.179186
+[0m18:46:06.186802 [debug] [Thread-1 (]: On test.massive_hotel.not_null_customer_data_email.c13ae94780: Close
+[0m18:46:06.208875 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 5.0 seconds
+[0m18:46:06.211631 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 5.0 seconds
+[0m18:46:06.229832 [debug] [Thread-3 (]: Timing info for test.massive_hotel.not_null_customer_data_id.30a04e076c (execute): 18:46:01.387509 => 18:46:06.228302
+[0m18:46:06.256969 [debug] [Thread-4 (]: Timing info for test.massive_hotel.unique_customer_data_id.cc6f0ac84c (execute): 18:46:01.395747 => 18:46:06.247369
+[0m18:46:06.263254 [debug] [Thread-3 (]: On test.massive_hotel.not_null_customer_data_id.30a04e076c: Close
+[0m18:46:06.283891 [debug] [Thread-4 (]: On test.massive_hotel.unique_customer_data_id.cc6f0ac84c: Close
+[0m18:46:06.374124 [info ] [Thread-1 (]: 1 of 4 PASS not_null_customer_data_email ....................................... [[32mPASS[0m in 5.29s]
+[0m18:46:06.390137 [debug] [Thread-1 (]: Finished running node test.massive_hotel.not_null_customer_data_email.c13ae94780
+[0m18:46:06.473564 [info ] [Thread-3 (]: 3 of 4 PASS not_null_customer_data_id .......................................... [[32mPASS[0m in 5.38s]
+[0m18:46:06.481422 [debug] [Thread-3 (]: Finished running node test.massive_hotel.not_null_customer_data_id.30a04e076c
+[0m18:46:06.493100 [info ] [Thread-4 (]: 4 of 4 PASS unique_customer_data_id ............................................ [[32mPASS[0m in 5.38s]
+[0m18:46:06.501227 [debug] [Thread-4 (]: Finished running node test.massive_hotel.unique_customer_data_id.cc6f0ac84c
+[0m18:46:06.518047 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:46:06.522269 [debug] [MainThread]: Connection 'list_massive_hotel_silver' was properly closed.
+[0m18:46:06.528643 [debug] [MainThread]: Connection 'list_massive_hotel_gold' was properly closed.
+[0m18:46:06.532949 [debug] [MainThread]: Connection 'test.massive_hotel.not_null_customer_data_email.c13ae94780' was properly closed.
+[0m18:46:06.536587 [debug] [MainThread]: Connection 'test.massive_hotel.not_null_customer_data_first_name.992883872d' was properly closed.
+[0m18:46:06.543368 [debug] [MainThread]: Connection 'test.massive_hotel.not_null_customer_data_id.30a04e076c' was properly closed.
+[0m18:46:06.544823 [debug] [MainThread]: Connection 'test.massive_hotel.unique_customer_data_id.cc6f0ac84c' was properly closed.
+[0m18:46:06.558623 [info ] [MainThread]: 
+[0m18:46:06.567262 [info ] [MainThread]: Finished running 4 tests in 0 hours 0 minutes and 8.44 seconds (8.44s).
+[0m18:46:06.583005 [debug] [MainThread]: Command end result
+[0m18:46:06.648468 [info ] [MainThread]: 
+[0m18:46:06.653708 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:46:06.660826 [info ] [MainThread]: 
+[0m18:46:06.667288 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+[0m18:46:06.682233 [debug] [MainThread]: Command `dbt test` succeeded at 18:46:06.680831 after 10.99 seconds
+[0m18:46:06.688894 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017D2D87FEC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017D2BA765D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017D2B7E2030>]}
+[0m18:46:06.694235 [debug] [MainThread]: Flushing usage events
+[0m19:40:44.125426 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B9528A150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B9528B7A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B9528A390>]}
+
+
+============================== 19:40:44.127265 | de5ed3ba-9a42-424d-9a02-39f73846f6a7 ==============================
+[0m19:40:44.127265 [info ] [MainThread]: Running with dbt=1.7.4
+[0m19:40:44.138111 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'E:\\Code\\massive-hotel-customer-data\\dbt', 'log_path': 'E:\\Code\\massive-hotel-customer-data\\dbt\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt test', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m19:40:45.334068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'de5ed3ba-9a42-424d-9a02-39f73846f6a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B95CDFC80>]}
+[0m19:40:45.507557 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'de5ed3ba-9a42-424d-9a02-39f73846f6a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B95DF7C20>]}
+[0m19:40:45.507557 [info ] [MainThread]: Registered adapter: snowflake=1.7.1
+[0m19:40:45.541041 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m19:40:45.817552 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:40:45.817552 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:40:45.820037 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- sources.customer_raw_data
+[0m19:40:45.839110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'de5ed3ba-9a42-424d-9a02-39f73846f6a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B95D2DBE0>]}
+[0m19:40:45.930264 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'de5ed3ba-9a42-424d-9a02-39f73846f6a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B96F44740>]}
+[0m19:40:45.933509 [info ] [MainThread]: Found 2 models, 4 tests, 1 source, 0 exposures, 0 metrics, 435 macros, 0 groups, 0 semantic models
+[0m19:40:45.934811 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'de5ed3ba-9a42-424d-9a02-39f73846f6a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B8E142480>]}
+[0m19:40:45.938291 [info ] [MainThread]: 
+[0m19:40:45.941015 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:40:45.945828 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel_gold'
+[0m19:40:45.955080 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel_silver'
+[0m19:40:45.975419 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel_gold"
+[0m19:40:45.984057 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel_silver"
+[0m19:40:45.984057 [debug] [ThreadPool]: On list_massive_hotel_gold: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel_gold"} */
+show terse objects in massive_hotel.gold limit 10000
+[0m19:40:45.984057 [debug] [ThreadPool]: On list_massive_hotel_silver: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel_silver"} */
+show terse objects in massive_hotel.silver limit 10000
+[0m19:40:45.988421 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:40:45.989464 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:40:48.389575 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.0 seconds
+[0m19:40:48.399781 [debug] [ThreadPool]: On list_massive_hotel_silver: Close
+[0m19:40:48.471038 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m19:40:48.476584 [debug] [ThreadPool]: On list_massive_hotel_gold: Close
+[0m19:40:48.667839 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'de5ed3ba-9a42-424d-9a02-39f73846f6a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B9528A0C0>]}
+[0m19:40:48.672925 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m19:40:48.676770 [info ] [MainThread]: 
+[0m19:40:48.712268 [debug] [Thread-2 (]: Began running node test.massive_hotel.not_null_customer_data_first_name.992883872d
+[0m19:40:48.705885 [debug] [Thread-1 (]: Began running node test.massive_hotel.not_null_customer_data_email.c13ae94780
+[0m19:40:48.730272 [debug] [Thread-3 (]: Began running node test.massive_hotel.not_null_customer_data_id.30a04e076c
+[0m19:40:48.748107 [debug] [Thread-4 (]: Began running node test.massive_hotel.unique_customer_data_id.cc6f0ac84c
+[0m19:40:48.763387 [info ] [Thread-2 (]: 2 of 4 START test not_null_customer_data_first_name ............................ [RUN]
+[0m19:40:48.765430 [info ] [Thread-1 (]: 1 of 4 START test not_null_customer_data_email ................................. [RUN]
+[0m19:40:48.779542 [debug] [Thread-2 (]: Acquiring new snowflake connection 'test.massive_hotel.not_null_customer_data_first_name.992883872d'
+[0m19:40:48.779542 [debug] [Thread-1 (]: Acquiring new snowflake connection 'test.massive_hotel.not_null_customer_data_email.c13ae94780'
+[0m19:40:48.786555 [debug] [Thread-2 (]: Began compiling node test.massive_hotel.not_null_customer_data_first_name.992883872d
+[0m19:40:48.788277 [debug] [Thread-1 (]: Began compiling node test.massive_hotel.not_null_customer_data_email.c13ae94780
+[0m19:40:48.771453 [info ] [Thread-3 (]: 3 of 4 START test not_null_customer_data_id .................................... [RUN]
+[0m19:40:48.771453 [info ] [Thread-4 (]: 4 of 4 START test unique_customer_data_id ...................................... [RUN]
+[0m19:40:48.877664 [debug] [Thread-3 (]: Acquiring new snowflake connection 'test.massive_hotel.not_null_customer_data_id.30a04e076c'
+[0m19:40:48.896025 [debug] [Thread-1 (]: Writing injected SQL for node "test.massive_hotel.not_null_customer_data_email.c13ae94780"
+[0m19:40:48.896025 [debug] [Thread-2 (]: Writing injected SQL for node "test.massive_hotel.not_null_customer_data_first_name.992883872d"
+[0m19:40:48.901493 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.massive_hotel.unique_customer_data_id.cc6f0ac84c'
+[0m19:40:48.902763 [debug] [Thread-3 (]: Began compiling node test.massive_hotel.not_null_customer_data_id.30a04e076c
+[0m19:40:48.905901 [debug] [Thread-4 (]: Began compiling node test.massive_hotel.unique_customer_data_id.cc6f0ac84c
+[0m19:40:48.908073 [debug] [Thread-1 (]: Timing info for test.massive_hotel.not_null_customer_data_email.c13ae94780 (compile): 19:40:48.820271 => 19:40:48.908073
+[0m19:40:48.909948 [debug] [Thread-2 (]: Timing info for test.massive_hotel.not_null_customer_data_first_name.992883872d (compile): 19:40:48.788277 => 19:40:48.909948
+[0m19:40:48.922657 [debug] [Thread-3 (]: Writing injected SQL for node "test.massive_hotel.not_null_customer_data_id.30a04e076c"
+[0m19:40:48.929391 [debug] [Thread-4 (]: Writing injected SQL for node "test.massive_hotel.unique_customer_data_id.cc6f0ac84c"
+[0m19:40:48.929391 [debug] [Thread-1 (]: Began executing node test.massive_hotel.not_null_customer_data_email.c13ae94780
+[0m19:40:48.938731 [debug] [Thread-2 (]: Began executing node test.massive_hotel.not_null_customer_data_first_name.992883872d
+[0m19:40:48.969781 [debug] [Thread-3 (]: Timing info for test.massive_hotel.not_null_customer_data_id.30a04e076c (compile): 19:40:48.912420 => 19:40:48.969781
+[0m19:40:48.973348 [debug] [Thread-1 (]: Writing runtime sql for node "test.massive_hotel.not_null_customer_data_email.c13ae94780"
+[0m19:40:48.985859 [debug] [Thread-4 (]: Timing info for test.massive_hotel.unique_customer_data_id.cc6f0ac84c (compile): 19:40:48.924877 => 19:40:48.973348
+[0m19:40:48.987390 [debug] [Thread-2 (]: Writing runtime sql for node "test.massive_hotel.not_null_customer_data_first_name.992883872d"
+[0m19:40:48.987390 [debug] [Thread-3 (]: Began executing node test.massive_hotel.not_null_customer_data_id.30a04e076c
+[0m19:40:48.987390 [debug] [Thread-4 (]: Began executing node test.massive_hotel.unique_customer_data_id.cc6f0ac84c
+[0m19:40:48.987390 [debug] [Thread-1 (]: Using snowflake connection "test.massive_hotel.not_null_customer_data_email.c13ae94780"
+[0m19:40:49.006144 [debug] [Thread-3 (]: Writing runtime sql for node "test.massive_hotel.not_null_customer_data_id.30a04e076c"
+[0m19:40:49.008544 [debug] [Thread-2 (]: Using snowflake connection "test.massive_hotel.not_null_customer_data_first_name.992883872d"
+[0m19:40:49.015669 [debug] [Thread-4 (]: Writing runtime sql for node "test.massive_hotel.unique_customer_data_id.cc6f0ac84c"
+[0m19:40:49.016922 [debug] [Thread-1 (]: On test.massive_hotel.not_null_customer_data_email.c13ae94780: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "node_id": "test.massive_hotel.not_null_customer_data_email.c13ae94780"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select email
+from massive_hotel.gold.customer_data
+where email is null
+
+
+
+      
+    ) dbt_internal_test
+[0m19:40:49.017933 [debug] [Thread-2 (]: On test.massive_hotel.not_null_customer_data_first_name.992883872d: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "node_id": "test.massive_hotel.not_null_customer_data_first_name.992883872d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select first_name
+from massive_hotel.gold.customer_data
+where first_name is null
+
+
+
+      
+    ) dbt_internal_test
+[0m19:40:49.022745 [debug] [Thread-3 (]: Using snowflake connection "test.massive_hotel.not_null_customer_data_id.30a04e076c"
+[0m19:40:49.022745 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m19:40:49.022745 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m19:40:49.026478 [debug] [Thread-4 (]: Using snowflake connection "test.massive_hotel.unique_customer_data_id.cc6f0ac84c"
+[0m19:40:49.026478 [debug] [Thread-3 (]: On test.massive_hotel.not_null_customer_data_id.30a04e076c: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "node_id": "test.massive_hotel.not_null_customer_data_id.30a04e076c"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from massive_hotel.gold.customer_data
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m19:40:49.036230 [debug] [Thread-4 (]: On test.massive_hotel.unique_customer_data_id.cc6f0ac84c: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "node_id": "test.massive_hotel.unique_customer_data_id.cc6f0ac84c"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from massive_hotel.gold.customer_data
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m19:40:49.041972 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m19:40:49.043727 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m19:40:51.433639 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m19:40:51.462850 [debug] [Thread-1 (]: Timing info for test.massive_hotel.not_null_customer_data_email.c13ae94780 (execute): 19:40:48.940869 => 19:40:51.459479
+[0m19:40:51.472260 [debug] [Thread-1 (]: On test.massive_hotel.not_null_customer_data_email.c13ae94780: Close
+[0m19:40:51.496048 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m19:40:51.496048 [debug] [Thread-3 (]: Timing info for test.massive_hotel.not_null_customer_data_id.30a04e076c (execute): 19:40:49.001902 => 19:40:51.496048
+[0m19:40:51.496048 [debug] [Thread-3 (]: On test.massive_hotel.not_null_customer_data_id.30a04e076c: Close
+[0m19:40:51.583296 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m19:40:51.585331 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m19:40:51.589362 [debug] [Thread-2 (]: Timing info for test.massive_hotel.not_null_customer_data_first_name.992883872d (execute): 19:40:48.987390 => 19:40:51.589362
+[0m19:40:51.595843 [debug] [Thread-4 (]: Timing info for test.massive_hotel.unique_customer_data_id.cc6f0ac84c (execute): 19:40:49.009922 => 19:40:51.595843
+[0m19:40:51.595843 [debug] [Thread-2 (]: On test.massive_hotel.not_null_customer_data_first_name.992883872d: Close
+[0m19:40:51.602517 [debug] [Thread-4 (]: On test.massive_hotel.unique_customer_data_id.cc6f0ac84c: Close
+[0m19:40:51.627257 [info ] [Thread-1 (]: 1 of 4 PASS not_null_customer_data_email ....................................... [[32mPASS[0m in 2.85s]
+[0m19:40:51.631506 [debug] [Thread-1 (]: Finished running node test.massive_hotel.not_null_customer_data_email.c13ae94780
+[0m19:40:51.660759 [info ] [Thread-3 (]: 3 of 4 PASS not_null_customer_data_id .......................................... [[32mPASS[0m in 2.78s]
+[0m19:40:51.665124 [debug] [Thread-3 (]: Finished running node test.massive_hotel.not_null_customer_data_id.30a04e076c
+[0m19:40:51.759455 [info ] [Thread-4 (]: 4 of 4 PASS unique_customer_data_id ............................................ [[32mPASS[0m in 2.86s]
+[0m19:40:51.761626 [debug] [Thread-4 (]: Finished running node test.massive_hotel.unique_customer_data_id.cc6f0ac84c
+[0m19:40:51.784976 [info ] [Thread-2 (]: 2 of 4 PASS not_null_customer_data_first_name .................................. [[32mPASS[0m in 3.01s]
+[0m19:40:51.787072 [debug] [Thread-2 (]: Finished running node test.massive_hotel.not_null_customer_data_first_name.992883872d
+[0m19:40:51.793773 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:40:51.794943 [debug] [MainThread]: Connection 'list_massive_hotel_gold' was properly closed.
+[0m19:40:51.797959 [debug] [MainThread]: Connection 'list_massive_hotel_silver' was properly closed.
+[0m19:40:51.797959 [debug] [MainThread]: Connection 'test.massive_hotel.not_null_customer_data_first_name.992883872d' was properly closed.
+[0m19:40:51.802311 [debug] [MainThread]: Connection 'test.massive_hotel.not_null_customer_data_email.c13ae94780' was properly closed.
+[0m19:40:51.802311 [debug] [MainThread]: Connection 'test.massive_hotel.not_null_customer_data_id.30a04e076c' was properly closed.
+[0m19:40:51.803899 [debug] [MainThread]: Connection 'test.massive_hotel.unique_customer_data_id.cc6f0ac84c' was properly closed.
+[0m19:40:51.805597 [info ] [MainThread]: 
+[0m19:40:51.807237 [info ] [MainThread]: Finished running 4 tests in 0 hours 0 minutes and 5.86 seconds (5.86s).
+[0m19:40:51.813692 [debug] [MainThread]: Command end result
+[0m19:40:51.837375 [info ] [MainThread]: 
+[0m19:40:51.840866 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:40:51.842849 [info ] [MainThread]: 
+[0m19:40:51.848844 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+[0m19:40:51.854440 [debug] [MainThread]: Command `dbt test` succeeded at 19:40:51.854440 after 8.02 seconds
+[0m19:40:51.854440 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B9719FEF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B96F98830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B94F58B00>]}
+[0m19:40:51.856744 [debug] [MainThread]: Flushing usage events

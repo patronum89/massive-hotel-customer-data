@@ -1,0 +1,6 @@
+2023.12.31 18:26:49 INFO  Started: Metals version 1.2.0 in folders 'E:\Code\massive-hotel-customer-data\dbt' for client Visual Studio Code 1.85.1.
+2023.12.31 18:26:50 WARN  Build server is not auto-connectable.
+2023.12.31 18:26:50 WARN  no build tool detected in workspace 'E:\Code\massive-hotel-customer-data\dbt'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.12.31 19:57:16 INFO  Shutting down server
+2023.12.31 19:57:16 INFO  shutting down Metals
+2023.12.31 19:57:16 INFO  Exiting server

@@ -1,5 +1,8 @@
 import json
+import boto3
 import datetime
+import os, tempfile
+from pathlib import Path
 import random
 
 def randomnumber(n):
@@ -22,7 +25,7 @@ def generate_customer_data():
             "created_at": str(datetime.datetime.utcnow()),
             "address": generate_address() , # Generating nested address data
             "phone_number": generate_phone_number(), #generate nested phonenumber data
-            "update_at": str(datetime.datetime.utcnow())
+            "updated_at": str(datetime.datetime.utcnow())
         }
         customers.append(customer)
 
@@ -49,7 +52,6 @@ def generate_phone_number():
 
     for i in range(type_index):
         ph_no = []
-        print(f"type:{type[i]}")
 
         #Generate ranfom 10 digit number as phone number
         for n in range(1, 10): 
@@ -63,11 +65,18 @@ def generate_phone_number():
 
     return phone_numbers
 
-if __name__ == "__main__":
+def lambda_handler(event, context):
+    s3 = boto3.client('s3')
+    bucket = 'massive-hotel-customer-data'
+    upload_key = f"raw-data/customer_data_{str(datetime.datetime.now().strftime('%Y_%m_%d_%H_%M_%S'))}.json"
+ 
     customer_data = generate_customer_data()
-
+    
     try:
-        with open("/customer_data.json", "w") as file:
+        with open("/tmp/customer_data.json", "w") as file:
             json.dump(customer_data, file, indent=2)
     except TypeError:
         print("Unable to serialize the object")
+
+    # Upload the generated customer data JSON file back to S3
+    s3.upload_file("/tmp/customer_data.json", bucket, upload_key)
