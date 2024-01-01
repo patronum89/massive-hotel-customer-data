@@ -4823,3 +4823,722 @@ having count(*) > 1
 [0m19:40:51.854440 [debug] [MainThread]: Command `dbt test` succeeded at 19:40:51.854440 after 8.02 seconds
 [0m19:40:51.854440 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B9719FEF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B96F98830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B94F58B00>]}
 [0m19:40:51.856744 [debug] [MainThread]: Flushing usage events
+[0m17:27:17.915743 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017FB329A7E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017FB329A9F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017FB329A960>]}
+
+
+============================== 17:27:17.928104 | 221b926c-b701-4f20-ac84-f4dd5dd973ea ==============================
+[0m17:27:17.928104 [info ] [MainThread]: Running with dbt=1.7.4
+[0m17:27:17.928104 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': './profiles.yml', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --profiles-dir ./profiles.yml --project-dir ./dbt_project.yml --full-refresh', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:27:17.928104 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path dbt_project.yml\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:27:17.928104 [debug] [MainThread]: Command `dbt run` failed at 17:27:17.928104 after 0.08 seconds
+[0m17:27:17.928104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017FB2747470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017FB2A12C60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017FB2AFC8F0>]}
+[0m17:27:17.928104 [debug] [MainThread]: Flushing usage events
+[0m17:27:45.747724 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D03CE4BA70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D03CE4BDA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D03CE49820>]}
+
+
+============================== 17:27:45.747724 | 47715196-8c11-4f60-a6ec-b01a4dec688f ==============================
+[0m17:27:45.747724 [info ] [MainThread]: Running with dbt=1.7.4
+[0m17:27:45.747724 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --profiles-dir . --project-dir . --full-refresh', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m17:27:47.544981 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '47715196-8c11-4f60-a6ec-b01a4dec688f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D03CE49040>]}
+[0m17:27:47.693138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '47715196-8c11-4f60-a6ec-b01a4dec688f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D03D663230>]}
+[0m17:27:47.693138 [info ] [MainThread]: Registered adapter: snowflake=1.7.1
+[0m17:27:47.710786 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m17:27:47.881886 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m17:27:47.881886 [debug] [MainThread]: Partial parsing: updated file: massive_hotel://macros\generate_flatten_json.sql
+[0m17:27:48.041477 [debug] [MainThread]: 1603: static parser failed on gold\customer_data.sql
+[0m17:27:48.057112 [debug] [MainThread]: 1602: parser fallback to jinja rendering on gold\customer_data.sql
+[0m17:27:48.057112 [debug] [MainThread]: 1603: static parser failed on silver\staging_customer_data.sql
+[0m17:27:48.073225 [debug] [MainThread]: 1602: parser fallback to jinja rendering on silver\staging_customer_data.sql
+[0m17:27:48.240764 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- sources.customer_raw_data
+[0m17:27:48.240764 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '47715196-8c11-4f60-a6ec-b01a4dec688f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D03ED82B70>]}
+[0m17:27:48.260357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '47715196-8c11-4f60-a6ec-b01a4dec688f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D03EE36C90>]}
+[0m17:27:48.261356 [info ] [MainThread]: Found 2 models, 4 tests, 1 source, 0 exposures, 0 metrics, 435 macros, 0 groups, 0 semantic models
+[0m17:27:48.263360 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '47715196-8c11-4f60-a6ec-b01a4dec688f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D03D98A0F0>]}
+[0m17:27:48.265356 [info ] [MainThread]: 
+[0m17:27:48.265788 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m17:27:48.265788 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel'
+[0m17:27:48.265788 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel'
+[0m17:27:48.272299 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel"
+[0m17:27:48.281541 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel"
+[0m17:27:48.282521 [debug] [ThreadPool]: On list_massive_hotel: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel"} */
+show terse schemas in database massive_hotel
+    limit 10000
+[0m17:27:48.283511 [debug] [ThreadPool]: On list_massive_hotel: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel"} */
+show terse schemas in database massive_hotel
+    limit 10000
+[0m17:27:48.284514 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:27:48.285508 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:27:51.017452 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 3.0 seconds
+[0m17:27:51.017452 [debug] [ThreadPool]: On list_massive_hotel: Close
+[0m17:27:51.017452 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 3.0 seconds
+[0m17:27:51.017452 [debug] [ThreadPool]: On list_massive_hotel: Close
+[0m17:27:51.159241 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel_gold'
+[0m17:27:51.174498 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel_silver'
+[0m17:27:51.179549 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel_gold"
+[0m17:27:51.179549 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel_silver"
+[0m17:27:51.179549 [debug] [ThreadPool]: On list_massive_hotel_gold: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel_gold"} */
+show terse objects in massive_hotel.gold limit 10000
+[0m17:27:51.179549 [debug] [ThreadPool]: On list_massive_hotel_silver: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel_silver"} */
+show terse objects in massive_hotel.silver limit 10000
+[0m17:27:51.190557 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:27:51.190557 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:27:52.475638 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.0 seconds
+[0m17:27:52.475638 [debug] [ThreadPool]: On list_massive_hotel_silver: Close
+[0m17:27:52.554169 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.0 seconds
+[0m17:27:52.554169 [debug] [ThreadPool]: On list_massive_hotel_gold: Close
+[0m17:27:52.710257 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '47715196-8c11-4f60-a6ec-b01a4dec688f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D03ECE78C0>]}
+[0m17:27:52.712264 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m17:27:52.714258 [info ] [MainThread]: 
+[0m17:27:52.727634 [debug] [Thread-1 (]: Began running node model.massive_hotel.staging_customer_data
+[0m17:27:52.730219 [info ] [Thread-1 (]: 1 of 2 START sql incremental model massive_hotel.silver.staging_customer_data .. [RUN]
+[0m17:27:52.733226 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.massive_hotel.staging_customer_data'
+[0m17:27:52.734228 [debug] [Thread-1 (]: Began compiling node model.massive_hotel.staging_customer_data
+[0m17:27:52.754684 [debug] [Thread-1 (]: Using snowflake connection "model.massive_hotel.staging_customer_data"
+[0m17:27:52.754684 [debug] [Thread-1 (]: On model.massive_hotel.staging_customer_data: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "node_id": "model.massive_hotel.staging_customer_data"} */
+with json_flatten as (
+	select 
+	j.path as json_path,
+	case when typeof(f.value)='VARCHAR' then 'STRING' 
+		else 'NUMBER' end 
+	as json_datatype
+	from massive_hotel.bronze.customer_raw_data,
+	lateral flatten(input => record_content, recursive => true ) j
+	where typeof(f.value) in ('VARCHAR','INTEGER')
+)
+
+ select distinct concat(json_path,'::',json_datatype),json_path
+ from json_flatten
+ where json_datatype not in ('NULL_VALUE','OBJECT')
+[0m17:27:52.754684 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:27:53.965312 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b160ad-3200-f87f-0000-00076c22ba8d
+[0m17:27:53.966323 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 4 at position 18
+invalid identifier 'F.VALUE'
+[0m17:27:53.972543 [debug] [Thread-1 (]: Timing info for model.massive_hotel.staging_customer_data (compile): 17:27:52.735227 => 17:27:53.971543
+[0m17:27:53.972543 [debug] [Thread-1 (]: On model.massive_hotel.staging_customer_data: Close
+[0m17:27:54.124190 [debug] [Thread-1 (]: Database Error in model staging_customer_data (models\silver\staging_customer_data.sql)
+  000904 (42000): SQL compilation error: error line 4 at position 18
+  invalid identifier 'F.VALUE'
+[0m17:27:54.124190 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '47715196-8c11-4f60-a6ec-b01a4dec688f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D03F1A3680>]}
+[0m17:27:54.124190 [error] [Thread-1 (]: 1 of 2 ERROR creating sql incremental model massive_hotel.silver.staging_customer_data  [[31mERROR[0m in 1.39s]
+[0m17:27:54.124190 [debug] [Thread-1 (]: Finished running node model.massive_hotel.staging_customer_data
+[0m17:27:54.124190 [debug] [Thread-3 (]: Began running node model.massive_hotel.customer_data
+[0m17:27:54.124190 [info ] [Thread-3 (]: 2 of 2 SKIP relation gold.customer_data ........................................ [[33mSKIP[0m]
+[0m17:27:54.124190 [debug] [Thread-3 (]: Finished running node model.massive_hotel.customer_data
+[0m17:27:54.139764 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:27:54.139764 [debug] [MainThread]: Connection 'list_massive_hotel' was properly closed.
+[0m17:27:54.139764 [debug] [MainThread]: Connection 'list_massive_hotel' was properly closed.
+[0m17:27:54.139764 [debug] [MainThread]: Connection 'list_massive_hotel_gold' was properly closed.
+[0m17:27:54.139764 [debug] [MainThread]: Connection 'list_massive_hotel_silver' was properly closed.
+[0m17:27:54.139764 [debug] [MainThread]: Connection 'model.massive_hotel.staging_customer_data' was properly closed.
+[0m17:27:54.139764 [info ] [MainThread]: 
+[0m17:27:54.139764 [info ] [MainThread]: Finished running 2 incremental models in 0 hours 0 minutes and 5.87 seconds (5.87s).
+[0m17:27:54.146435 [debug] [MainThread]: Command end result
+[0m17:27:54.156442 [info ] [MainThread]: 
+[0m17:27:54.157767 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m17:27:54.158954 [info ] [MainThread]: 
+[0m17:27:54.159963 [error] [MainThread]:   Database Error in model staging_customer_data (models\silver\staging_customer_data.sql)
+  000904 (42000): SQL compilation error: error line 4 at position 18
+  invalid identifier 'F.VALUE'
+[0m17:27:54.160964 [info ] [MainThread]: 
+[0m17:27:54.161992 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 TOTAL=2
+[0m17:27:54.164008 [debug] [MainThread]: Command `dbt run` failed at 17:27:54.164008 after 8.52 seconds
+[0m17:27:54.165043 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D03BA8FAD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D03ED1E4B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D0399C7440>]}
+[0m17:27:54.165043 [debug] [MainThread]: Flushing usage events
+[0m17:28:36.765642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023933DFA780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023933DFAAB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023933DF8290>]}
+
+
+============================== 17:28:36.781315 | 8ac660ad-5e8c-4c3d-bfd1-c5569e3d1dbd ==============================
+[0m17:28:36.781315 [info ] [MainThread]: Running with dbt=1.7.4
+[0m17:28:36.781315 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --profiles-dir . --project-dir . --full-refresh', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m17:28:37.251631 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8ac660ad-5e8c-4c3d-bfd1-c5569e3d1dbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023933E36B70>]}
+[0m17:28:37.351990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8ac660ad-5e8c-4c3d-bfd1-c5569e3d1dbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023934400DD0>]}
+[0m17:28:37.351990 [info ] [MainThread]: Registered adapter: snowflake=1.7.1
+[0m17:28:37.363693 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m17:28:37.467163 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m17:28:37.468164 [debug] [MainThread]: Partial parsing: updated file: massive_hotel://macros\generate_flatten_json.sql
+[0m17:28:37.629077 [debug] [MainThread]: 1603: static parser failed on gold\customer_data.sql
+[0m17:28:37.644709 [debug] [MainThread]: 1602: parser fallback to jinja rendering on gold\customer_data.sql
+[0m17:28:37.644709 [debug] [MainThread]: 1603: static parser failed on silver\staging_customer_data.sql
+[0m17:28:37.660830 [debug] [MainThread]: 1602: parser fallback to jinja rendering on silver\staging_customer_data.sql
+[0m17:28:37.815251 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- sources.customer_raw_data
+[0m17:28:37.815251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8ac660ad-5e8c-4c3d-bfd1-c5569e3d1dbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239359D7740>]}
+[0m17:28:37.839722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8ac660ad-5e8c-4c3d-bfd1-c5569e3d1dbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023935960AA0>]}
+[0m17:28:37.839722 [info ] [MainThread]: Found 2 models, 4 tests, 1 source, 0 exposures, 0 metrics, 435 macros, 0 groups, 0 semantic models
+[0m17:28:37.839722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8ac660ad-5e8c-4c3d-bfd1-c5569e3d1dbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023935A84320>]}
+[0m17:28:37.839722 [info ] [MainThread]: 
+[0m17:28:37.839722 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m17:28:37.839722 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel'
+[0m17:28:37.856295 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel'
+[0m17:28:37.856295 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel"
+[0m17:28:37.856295 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel"
+[0m17:28:37.856295 [debug] [ThreadPool]: On list_massive_hotel: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel"} */
+show terse schemas in database massive_hotel
+    limit 10000
+[0m17:28:37.856295 [debug] [ThreadPool]: On list_massive_hotel: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel"} */
+show terse schemas in database massive_hotel
+    limit 10000
+[0m17:28:37.856295 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:28:37.856295 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:28:39.208584 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.0 seconds
+[0m17:28:39.223984 [debug] [ThreadPool]: On list_massive_hotel: Close
+[0m17:28:39.223984 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.0 seconds
+[0m17:28:39.223984 [debug] [ThreadPool]: On list_massive_hotel: Close
+[0m17:28:39.369031 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel_silver'
+[0m17:28:39.384721 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel_gold'
+[0m17:28:39.369031 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel_silver"
+[0m17:28:39.384721 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel_gold"
+[0m17:28:39.384721 [debug] [ThreadPool]: On list_massive_hotel_silver: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel_silver"} */
+show terse objects in massive_hotel.silver limit 10000
+[0m17:28:39.384721 [debug] [ThreadPool]: On list_massive_hotel_gold: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel_gold"} */
+show terse objects in massive_hotel.gold limit 10000
+[0m17:28:39.384721 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:28:39.384721 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:28:40.623797 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.0 seconds
+[0m17:28:40.623797 [debug] [ThreadPool]: On list_massive_hotel_silver: Close
+[0m17:28:40.703144 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.0 seconds
+[0m17:28:40.703144 [debug] [ThreadPool]: On list_massive_hotel_gold: Close
+[0m17:28:40.859740 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8ac660ad-5e8c-4c3d-bfd1-c5569e3d1dbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023935A10890>]}
+[0m17:28:40.859740 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m17:28:40.859740 [info ] [MainThread]: 
+[0m17:28:40.859740 [debug] [Thread-1 (]: Began running node model.massive_hotel.staging_customer_data
+[0m17:28:40.859740 [info ] [Thread-1 (]: 1 of 2 START sql incremental model massive_hotel.silver.staging_customer_data .. [RUN]
+[0m17:28:40.872729 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.massive_hotel.staging_customer_data'
+[0m17:28:40.873580 [debug] [Thread-1 (]: Began compiling node model.massive_hotel.staging_customer_data
+[0m17:28:40.873580 [debug] [Thread-1 (]: Using snowflake connection "model.massive_hotel.staging_customer_data"
+[0m17:28:40.873580 [debug] [Thread-1 (]: On model.massive_hotel.staging_customer_data: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "node_id": "model.massive_hotel.staging_customer_data"} */
+with json_flatten as (
+	select 
+	j.path as json_path,
+	case when typeof(j.value)='VARCHAR' then 'STRING' 
+		else 'NUMBER' end 
+	as json_datatype
+	from massive_hotel.bronze.customer_raw_data,
+	lateral flatten(input => record_content, recursive => true ) j
+	where typeof(j.value) in ('VARCHAR','INTEGER')
+)
+
+ select distinct concat(json_path,'::',json_datatype),json_path
+ from json_flatten
+ where json_datatype not in ('NULL_VALUE','OBJECT')
+[0m17:28:40.873580 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:28:42.675241 [debug] [Thread-1 (]: SQL status: SUCCESS 20 in 2.0 seconds
+[0m17:28:42.675241 [debug] [Thread-1 (]: Writing injected SQL for node "model.massive_hotel.staging_customer_data"
+[0m17:28:42.675241 [debug] [Thread-1 (]: Timing info for model.massive_hotel.staging_customer_data (compile): 17:28:40.873580 => 17:28:42.675241
+[0m17:28:42.675241 [debug] [Thread-1 (]: Began executing node model.massive_hotel.staging_customer_data
+[0m17:28:42.742094 [debug] [Thread-1 (]: Writing runtime sql for node "model.massive_hotel.staging_customer_data"
+[0m17:28:42.742094 [debug] [Thread-1 (]: Using snowflake connection "model.massive_hotel.staging_customer_data"
+[0m17:28:42.742094 [debug] [Thread-1 (]: On model.massive_hotel.staging_customer_data: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "node_id": "model.massive_hotel.staging_customer_data"} */
+create or replace transient table massive_hotel.silver.staging_customer_data
+         as
+        (
+
+
+
+
+
+
+
+    
+
+
+
+select 
+
+    record_content:address.country::STRING as address_country::STRING, 
+
+    record_content:address.streetAddress::STRING as address_streetAddress::STRING, 
+
+    record_content:first_name::STRING as first_name::STRING, 
+
+    record_content:phone_number[0].type::STRING as phone_number_0_type::STRING, 
+
+    record_content:phone_number[2].number::NUMBER as phone_number_2_number::NUMBER, 
+
+    record_content:address.city::STRING as address_city::STRING, 
+
+    record_content:last_name::STRING as last_name::STRING, 
+
+    record_content:phone_number[3].number::NUMBER as phone_number_3_number::NUMBER, 
+
+    record_content:phone_number[2].type::STRING as phone_number_2_type::STRING, 
+
+    record_content:id::NUMBER as id::NUMBER, 
+
+    record_content:phone_number[0].number::NUMBER as phone_number_0_number::NUMBER, 
+
+    record_content:phone_number[1].number::NUMBER as phone_number_1_number::NUMBER, 
+
+    record_content:phone_number[3].type::STRING as phone_number_3_type::STRING, 
+
+    record_content:email::STRING as email::STRING, 
+
+    record_content:address.postalCode::NUMBER as address_postalCode::NUMBER, 
+
+    record_content:age::NUMBER as age::NUMBER, 
+
+    record_content:created_at::STRING as created_at::STRING, 
+
+    record_content:middle_name::STRING as middle_name::STRING, 
+
+    record_content:phone_number[1].type::STRING as phone_number_1_type::STRING, 
+
+    record_content:updated_at::STRING as updated_at::STRING
+
+
+from massive_hotel.bronze.customer_raw_data
+
+
+
+        );
+[0m17:28:42.876712 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b160ae-3200-f87f-0000-00076c22ba99
+[0m17:28:42.889565 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 17 at position 61 unexpected '::'.
+[0m17:28:42.892307 [debug] [Thread-1 (]: Timing info for model.massive_hotel.staging_customer_data (execute): 17:28:42.675241 => 17:28:42.891580
+[0m17:28:42.892307 [debug] [Thread-1 (]: On model.massive_hotel.staging_customer_data: Close
+[0m17:28:43.041624 [debug] [Thread-1 (]: Database Error in model staging_customer_data (models\silver\staging_customer_data.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 17 at position 61 unexpected '::'.
+  compiled Code at target\run\massive_hotel\models\silver\staging_customer_data.sql
+[0m17:28:43.042984 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8ac660ad-5e8c-4c3d-bfd1-c5569e3d1dbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023935C3C4A0>]}
+[0m17:28:43.042984 [error] [Thread-1 (]: 1 of 2 ERROR creating sql incremental model massive_hotel.silver.staging_customer_data  [[31mERROR[0m in 2.18s]
+[0m17:28:43.042984 [debug] [Thread-1 (]: Finished running node model.massive_hotel.staging_customer_data
+[0m17:28:43.042984 [debug] [Thread-3 (]: Began running node model.massive_hotel.customer_data
+[0m17:28:43.042984 [info ] [Thread-3 (]: 2 of 2 SKIP relation gold.customer_data ........................................ [[33mSKIP[0m]
+[0m17:28:43.042984 [debug] [Thread-3 (]: Finished running node model.massive_hotel.customer_data
+[0m17:28:43.042984 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:28:43.042984 [debug] [MainThread]: Connection 'list_massive_hotel' was properly closed.
+[0m17:28:43.042984 [debug] [MainThread]: Connection 'list_massive_hotel' was properly closed.
+[0m17:28:43.042984 [debug] [MainThread]: Connection 'list_massive_hotel_silver' was properly closed.
+[0m17:28:43.042984 [debug] [MainThread]: Connection 'list_massive_hotel_gold' was properly closed.
+[0m17:28:43.042984 [debug] [MainThread]: Connection 'model.massive_hotel.staging_customer_data' was properly closed.
+[0m17:28:43.042984 [info ] [MainThread]: 
+[0m17:28:43.056320 [info ] [MainThread]: Finished running 2 incremental models in 0 hours 0 minutes and 5.20 seconds (5.20s).
+[0m17:28:43.059088 [debug] [MainThread]: Command end result
+[0m17:28:43.063099 [info ] [MainThread]: 
+[0m17:28:43.063099 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m17:28:43.063099 [info ] [MainThread]: 
+[0m17:28:43.063099 [error] [MainThread]:   Database Error in model staging_customer_data (models\silver\staging_customer_data.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 17 at position 61 unexpected '::'.
+  compiled Code at target\run\massive_hotel\models\silver\staging_customer_data.sql
+[0m17:28:43.072900 [info ] [MainThread]: 
+[0m17:28:43.073922 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 TOTAL=2
+[0m17:28:43.075912 [debug] [MainThread]: Command `dbt run` failed at 17:28:43.075912 after 6.39 seconds
+[0m17:28:43.076938 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239338CB3B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239359379B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239328AA480>]}
+[0m17:28:43.078398 [debug] [MainThread]: Flushing usage events
+[0m17:33:07.252419 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5FD47A6F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5FD47AAE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5FD47AA20>]}
+
+
+============================== 17:33:07.252419 | 0186228e-8d52-4f02-9a9e-057aa030f021 ==============================
+[0m17:33:07.252419 [info ] [MainThread]: Running with dbt=1.7.4
+[0m17:33:07.252419 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run --profiles-dir . --project-dir . --full-refresh', 'send_anonymous_usage_stats': 'True'}
+[0m17:33:07.740692 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0186228e-8d52-4f02-9a9e-057aa030f021', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5FD8A9520>]}
+[0m17:33:07.834985 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0186228e-8d52-4f02-9a9e-057aa030f021', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5FED3E180>]}
+[0m17:33:07.834985 [info ] [MainThread]: Registered adapter: snowflake=1.7.1
+[0m17:33:07.834985 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m17:33:07.954958 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m17:33:07.957056 [debug] [MainThread]: Partial parsing: updated file: massive_hotel://macros\generate_flatten_json.sql
+[0m17:33:08.114788 [debug] [MainThread]: 1603: static parser failed on gold\customer_data.sql
+[0m17:33:08.146098 [debug] [MainThread]: 1602: parser fallback to jinja rendering on gold\customer_data.sql
+[0m17:33:08.146098 [debug] [MainThread]: 1603: static parser failed on silver\staging_customer_data.sql
+[0m17:33:08.161671 [debug] [MainThread]: 1602: parser fallback to jinja rendering on silver\staging_customer_data.sql
+[0m17:33:08.311716 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- sources.customer_raw_data
+[0m17:33:08.318735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0186228e-8d52-4f02-9a9e-057aa030f021', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5FF0612E0>]}
+[0m17:33:08.318735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0186228e-8d52-4f02-9a9e-057aa030f021', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5FEFE2B40>]}
+[0m17:33:08.318735 [info ] [MainThread]: Found 2 models, 4 tests, 1 source, 0 exposures, 0 metrics, 435 macros, 0 groups, 0 semantic models
+[0m17:33:08.335599 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0186228e-8d52-4f02-9a9e-057aa030f021', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5FF137920>]}
+[0m17:33:08.337611 [info ] [MainThread]: 
+[0m17:33:08.338610 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m17:33:08.341153 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel'
+[0m17:33:08.341153 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel'
+[0m17:33:08.341153 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel"
+[0m17:33:08.341153 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel"
+[0m17:33:08.341153 [debug] [ThreadPool]: On list_massive_hotel: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel"} */
+show terse schemas in database massive_hotel
+    limit 10000
+[0m17:33:08.355412 [debug] [ThreadPool]: On list_massive_hotel: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel"} */
+show terse schemas in database massive_hotel
+    limit 10000
+[0m17:33:08.355412 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:33:08.356470 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:33:09.793793 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.0 seconds
+[0m17:33:09.793793 [debug] [ThreadPool]: On list_massive_hotel: Close
+[0m17:33:09.826030 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.0 seconds
+[0m17:33:09.826030 [debug] [ThreadPool]: On list_massive_hotel: Close
+[0m17:33:09.983135 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel_silver'
+[0m17:33:09.983135 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel_silver"
+[0m17:33:09.983135 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel_gold'
+[0m17:33:09.998418 [debug] [ThreadPool]: On list_massive_hotel_silver: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel_silver"} */
+show terse objects in massive_hotel.silver limit 10000
+[0m17:33:09.998418 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel_gold"
+[0m17:33:09.998418 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:33:09.998418 [debug] [ThreadPool]: On list_massive_hotel_gold: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel_gold"} */
+show terse objects in massive_hotel.gold limit 10000
+[0m17:33:09.998418 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:33:11.236898 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.0 seconds
+[0m17:33:11.236898 [debug] [ThreadPool]: On list_massive_hotel_silver: Close
+[0m17:33:11.236898 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.0 seconds
+[0m17:33:11.252526 [debug] [ThreadPool]: On list_massive_hotel_gold: Close
+[0m17:33:11.393541 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0186228e-8d52-4f02-9a9e-057aa030f021', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5FC83A180>]}
+[0m17:33:11.393541 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m17:33:11.393541 [info ] [MainThread]: 
+[0m17:33:11.393541 [debug] [Thread-1 (]: Began running node model.massive_hotel.staging_customer_data
+[0m17:33:11.393541 [info ] [Thread-1 (]: 1 of 2 START sql incremental model massive_hotel.silver.staging_customer_data .. [RUN]
+[0m17:33:11.410242 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.massive_hotel.staging_customer_data'
+[0m17:33:11.412253 [debug] [Thread-1 (]: Began compiling node model.massive_hotel.staging_customer_data
+[0m17:33:11.429936 [debug] [Thread-1 (]: Using snowflake connection "model.massive_hotel.staging_customer_data"
+[0m17:33:11.429936 [debug] [Thread-1 (]: On model.massive_hotel.staging_customer_data: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "node_id": "model.massive_hotel.staging_customer_data"} */
+with json_flatten as (
+	select 
+	j.path as json_path,
+	case when typeof(j.value)='VARCHAR' then 'STRING' 
+		else 'NUMBER' end 
+	as json_datatype
+	from massive_hotel.bronze.customer_raw_data,
+	lateral flatten(input => record_content, recursive => true ) j
+	where typeof(j.value) in ('VARCHAR','INTEGER')
+)
+
+ select distinct concat(json_path,'::',json_datatype),json_path
+ from json_flatten
+ where json_datatype not in ('NULL_VALUE','OBJECT')
+[0m17:33:11.429936 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:33:12.601382 [debug] [Thread-1 (]: SQL status: SUCCESS 20 in 1.0 seconds
+[0m17:33:12.601382 [debug] [Thread-1 (]: Writing injected SQL for node "model.massive_hotel.staging_customer_data"
+[0m17:33:12.601382 [debug] [Thread-1 (]: Timing info for model.massive_hotel.staging_customer_data (compile): 17:33:11.413249 => 17:33:12.601382
+[0m17:33:12.601382 [debug] [Thread-1 (]: Began executing node model.massive_hotel.staging_customer_data
+[0m17:33:12.648698 [debug] [Thread-1 (]: Writing runtime sql for node "model.massive_hotel.staging_customer_data"
+[0m17:33:12.664327 [debug] [Thread-1 (]: Using snowflake connection "model.massive_hotel.staging_customer_data"
+[0m17:33:12.664327 [debug] [Thread-1 (]: On model.massive_hotel.staging_customer_data: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "node_id": "model.massive_hotel.staging_customer_data"} */
+create or replace transient table massive_hotel.silver.staging_customer_data
+         as
+        (
+
+
+
+
+
+
+    
+    
+
+
+select 
+
+    record_content:address.country::STRING as address.country
+
+    record_content:address.streetAddress::STRING as address.streetAddress
+
+    record_content:first_name::STRING as first_name
+
+    record_content:phone_number[0].type::STRING as phone_number[0].type
+
+    record_content:phone_number[2].number::NUMBER as phone_number[2].number
+
+    record_content:address.city::STRING as address.city
+
+    record_content:last_name::STRING as last_name
+
+    record_content:phone_number[3].number::NUMBER as phone_number[3].number
+
+    record_content:phone_number[2].type::STRING as phone_number[2].type
+
+    record_content:id::NUMBER as id
+
+    record_content:phone_number[0].number::NUMBER as phone_number[0].number
+
+    record_content:phone_number[1].number::NUMBER as phone_number[1].number
+
+    record_content:phone_number[3].type::STRING as phone_number[3].type
+
+    record_content:email::STRING as email
+
+    record_content:address.postalCode::NUMBER as address.postalCode
+
+    record_content:age::NUMBER as age
+
+    record_content:created_at::STRING as created_at
+
+    record_content:middle_name::STRING as middle_name
+
+    record_content:phone_number[1].type::STRING as phone_number[1].type
+
+    record_content:updated_at::STRING as updated_at
+
+
+from massive_hotel.bronze.customer_raw_data
+
+
+
+        );
+[0m17:33:12.789383 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b160b3-3200-f8dd-0000-00076c22c549
+[0m17:33:12.789383 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 16 at position 53 unexpected '.'.
+[0m17:33:12.789383 [debug] [Thread-1 (]: Timing info for model.massive_hotel.staging_customer_data (execute): 17:33:12.601382 => 17:33:12.789383
+[0m17:33:12.789383 [debug] [Thread-1 (]: On model.massive_hotel.staging_customer_data: Close
+[0m17:33:12.978558 [debug] [Thread-1 (]: Database Error in model staging_customer_data (models\silver\staging_customer_data.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 16 at position 53 unexpected '.'.
+  compiled Code at target\run\massive_hotel\models\silver\staging_customer_data.sql
+[0m17:33:12.978558 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0186228e-8d52-4f02-9a9e-057aa030f021', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5FF2A9580>]}
+[0m17:33:12.978558 [error] [Thread-1 (]: 1 of 2 ERROR creating sql incremental model massive_hotel.silver.staging_customer_data  [[31mERROR[0m in 1.57s]
+[0m17:33:12.993821 [debug] [Thread-1 (]: Finished running node model.massive_hotel.staging_customer_data
+[0m17:33:12.993821 [debug] [Thread-3 (]: Began running node model.massive_hotel.customer_data
+[0m17:33:12.993821 [info ] [Thread-3 (]: 2 of 2 SKIP relation gold.customer_data ........................................ [[33mSKIP[0m]
+[0m17:33:12.993821 [debug] [Thread-3 (]: Finished running node model.massive_hotel.customer_data
+[0m17:33:12.993821 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:33:12.993821 [debug] [MainThread]: Connection 'list_massive_hotel' was properly closed.
+[0m17:33:12.993821 [debug] [MainThread]: Connection 'list_massive_hotel' was properly closed.
+[0m17:33:12.993821 [debug] [MainThread]: Connection 'list_massive_hotel_silver' was properly closed.
+[0m17:33:12.993821 [debug] [MainThread]: Connection 'list_massive_hotel_gold' was properly closed.
+[0m17:33:12.993821 [debug] [MainThread]: Connection 'model.massive_hotel.staging_customer_data' was properly closed.
+[0m17:33:12.993821 [info ] [MainThread]: 
+[0m17:33:12.993821 [info ] [MainThread]: Finished running 2 incremental models in 0 hours 0 minutes and 4.66 seconds (4.66s).
+[0m17:33:13.006200 [debug] [MainThread]: Command end result
+[0m17:33:13.015217 [info ] [MainThread]: 
+[0m17:33:13.016214 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m17:33:13.017209 [info ] [MainThread]: 
+[0m17:33:13.018211 [error] [MainThread]:   Database Error in model staging_customer_data (models\silver\staging_customer_data.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 16 at position 53 unexpected '.'.
+  compiled Code at target\run\massive_hotel\models\silver\staging_customer_data.sql
+[0m17:33:13.019214 [info ] [MainThread]: 
+[0m17:33:13.020214 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 TOTAL=2
+[0m17:33:13.022763 [debug] [MainThread]: Command `dbt run` failed at 17:33:13.021214 after 5.86 seconds
+[0m17:33:13.022763 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5FF056D20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5FD45B710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5FDB8F680>]}
+[0m17:33:13.023888 [debug] [MainThread]: Flushing usage events
+[0m17:34:50.289494 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F28835640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F28404A40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F28835CD0>]}
+
+
+============================== 17:34:50.289494 | ad8d8a85-9cb8-4e89-89cf-99d0f0e902ab ==============================
+[0m17:34:50.289494 [info ] [MainThread]: Running with dbt=1.7.4
+[0m17:34:50.289494 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '.', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --profiles-dir . --project-dir . --full-refresh', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m17:34:50.769419 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ad8d8a85-9cb8-4e89-89cf-99d0f0e902ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F28BFAC00>]}
+[0m17:34:50.863538 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ad8d8a85-9cb8-4e89-89cf-99d0f0e902ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F28BFB350>]}
+[0m17:34:50.863538 [info ] [MainThread]: Registered adapter: snowflake=1.7.1
+[0m17:34:50.863538 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m17:34:50.980734 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m17:34:50.981735 [debug] [MainThread]: Partial parsing: updated file: massive_hotel://macros\generate_flatten_json.sql
+[0m17:34:51.132395 [debug] [MainThread]: 1603: static parser failed on gold\customer_data.sql
+[0m17:34:51.163690 [debug] [MainThread]: 1602: parser fallback to jinja rendering on gold\customer_data.sql
+[0m17:34:51.163690 [debug] [MainThread]: 1603: static parser failed on silver\staging_customer_data.sql
+[0m17:34:51.179313 [debug] [MainThread]: 1602: parser fallback to jinja rendering on silver\staging_customer_data.sql
+[0m17:34:51.336652 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- sources.customer_raw_data
+[0m17:34:51.336652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ad8d8a85-9cb8-4e89-89cf-99d0f0e902ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F2A7C47A0>]}
+[0m17:34:51.355510 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ad8d8a85-9cb8-4e89-89cf-99d0f0e902ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F2A72AC60>]}
+[0m17:34:51.356513 [info ] [MainThread]: Found 2 models, 4 tests, 1 source, 0 exposures, 0 metrics, 435 macros, 0 groups, 0 semantic models
+[0m17:34:51.357709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ad8d8a85-9cb8-4e89-89cf-99d0f0e902ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F2A47BFB0>]}
+[0m17:34:51.359711 [info ] [MainThread]: 
+[0m17:34:51.359711 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m17:34:51.359711 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel'
+[0m17:34:51.359711 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel"
+[0m17:34:51.359711 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel'
+[0m17:34:51.359711 [debug] [ThreadPool]: On list_massive_hotel: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel"} */
+show terse schemas in database massive_hotel
+    limit 10000
+[0m17:34:51.375418 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel"
+[0m17:34:51.375418 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:34:51.375418 [debug] [ThreadPool]: On list_massive_hotel: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel"} */
+show terse schemas in database massive_hotel
+    limit 10000
+[0m17:34:51.375418 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:34:52.775020 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.0 seconds
+[0m17:34:52.775020 [debug] [ThreadPool]: On list_massive_hotel: Close
+[0m17:34:52.838682 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.0 seconds
+[0m17:34:52.838682 [debug] [ThreadPool]: On list_massive_hotel: Close
+[0m17:34:53.013412 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel_gold'
+[0m17:34:53.028952 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_massive_hotel_silver'
+[0m17:34:53.029991 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel_gold"
+[0m17:34:53.033951 [debug] [ThreadPool]: Using snowflake connection "list_massive_hotel_silver"
+[0m17:34:53.035175 [debug] [ThreadPool]: On list_massive_hotel_gold: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel_gold"} */
+show terse objects in massive_hotel.gold limit 10000
+[0m17:34:53.036132 [debug] [ThreadPool]: On list_massive_hotel_silver: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "connection_name": "list_massive_hotel_silver"} */
+show terse objects in massive_hotel.silver limit 10000
+[0m17:34:53.037069 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:34:53.037990 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:34:54.341807 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.0 seconds
+[0m17:34:54.346803 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.0 seconds
+[0m17:34:54.353813 [debug] [ThreadPool]: On list_massive_hotel_silver: Close
+[0m17:34:54.361747 [debug] [ThreadPool]: On list_massive_hotel_gold: Close
+[0m17:34:54.511267 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ad8d8a85-9cb8-4e89-89cf-99d0f0e902ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F2A764230>]}
+[0m17:34:54.511267 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m17:34:54.511267 [info ] [MainThread]: 
+[0m17:34:54.526909 [debug] [Thread-1 (]: Began running node model.massive_hotel.staging_customer_data
+[0m17:34:54.526909 [info ] [Thread-1 (]: 1 of 2 START sql incremental model massive_hotel.silver.staging_customer_data .. [RUN]
+[0m17:34:54.540613 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.massive_hotel.staging_customer_data'
+[0m17:34:54.542645 [debug] [Thread-1 (]: Began compiling node model.massive_hotel.staging_customer_data
+[0m17:34:54.558762 [debug] [Thread-1 (]: Using snowflake connection "model.massive_hotel.staging_customer_data"
+[0m17:34:54.558762 [debug] [Thread-1 (]: On model.massive_hotel.staging_customer_data: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "node_id": "model.massive_hotel.staging_customer_data"} */
+with json_flatten as (
+	select 
+	j.path as json_path,
+	case when typeof(j.value)='VARCHAR' then 'STRING' 
+		else 'NUMBER' end 
+	as json_datatype
+	from massive_hotel.bronze.customer_raw_data,
+	lateral flatten(input => record_content, recursive => true ) j
+	where typeof(j.value) in ('VARCHAR','INTEGER')
+)
+
+ select distinct concat(json_path,'::',json_datatype),json_path
+ from json_flatten
+ where json_datatype not in ('NULL_VALUE','OBJECT')
+[0m17:34:54.558762 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:34:55.724321 [debug] [Thread-1 (]: SQL status: SUCCESS 20 in 1.0 seconds
+[0m17:34:55.724321 [debug] [Thread-1 (]: Writing injected SQL for node "model.massive_hotel.staging_customer_data"
+[0m17:34:55.724321 [debug] [Thread-1 (]: Timing info for model.massive_hotel.staging_customer_data (compile): 17:34:54.543688 => 17:34:55.724321
+[0m17:34:55.739604 [debug] [Thread-1 (]: Began executing node model.massive_hotel.staging_customer_data
+[0m17:34:55.786527 [debug] [Thread-1 (]: Writing runtime sql for node "model.massive_hotel.staging_customer_data"
+[0m17:34:55.786527 [debug] [Thread-1 (]: Using snowflake connection "model.massive_hotel.staging_customer_data"
+[0m17:34:55.798587 [debug] [Thread-1 (]: On model.massive_hotel.staging_customer_data: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "node_id": "model.massive_hotel.staging_customer_data"} */
+create or replace transient table massive_hotel.silver.staging_customer_data
+         as
+        (
+
+
+
+
+
+
+    
+    
+
+
+select 
+
+    record_content:address.country::STRING as address_country, 
+
+    record_content:address.streetAddress::STRING as address_streetAddress, 
+
+    record_content:first_name::STRING as first_name, 
+
+    record_content:phone_number[0].type::STRING as phone_number_0_type, 
+
+    record_content:phone_number[2].number::NUMBER as phone_number_2_number, 
+
+    record_content:address.city::STRING as address_city, 
+
+    record_content:last_name::STRING as last_name, 
+
+    record_content:phone_number[3].number::NUMBER as phone_number_3_number, 
+
+    record_content:phone_number[2].type::STRING as phone_number_2_type, 
+
+    record_content:id::NUMBER as id, 
+
+    record_content:phone_number[0].number::NUMBER as phone_number_0_number, 
+
+    record_content:phone_number[1].number::NUMBER as phone_number_1_number, 
+
+    record_content:phone_number[3].type::STRING as phone_number_3_type, 
+
+    record_content:email::STRING as email, 
+
+    record_content:address.postalCode::NUMBER as address_postalCode, 
+
+    record_content:age::NUMBER as age, 
+
+    record_content:created_at::STRING as created_at, 
+
+    record_content:middle_name::STRING as middle_name, 
+
+    record_content:phone_number[1].type::STRING as phone_number_1_type, 
+
+    record_content:updated_at::STRING as updated_at
+
+
+from massive_hotel.bronze.customer_raw_data
+
+
+
+        );
+[0m17:34:56.915336 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m17:34:56.931023 [debug] [Thread-1 (]: Applying DROP to: massive_hotel.silver.staging_customer_data__dbt_tmp
+[0m17:34:56.931023 [debug] [Thread-1 (]: Using snowflake connection "model.massive_hotel.staging_customer_data"
+[0m17:34:56.931023 [debug] [Thread-1 (]: On model.massive_hotel.staging_customer_data: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "node_id": "model.massive_hotel.staging_customer_data"} */
+drop view if exists massive_hotel.silver.staging_customer_data__dbt_tmp cascade
+[0m17:34:57.025730 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m17:34:57.072449 [debug] [Thread-1 (]: Timing info for model.massive_hotel.staging_customer_data (execute): 17:34:55.739604 => 17:34:57.072449
+[0m17:34:57.072449 [debug] [Thread-1 (]: On model.massive_hotel.staging_customer_data: Close
+[0m17:34:57.230069 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ad8d8a85-9cb8-4e89-89cf-99d0f0e902ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F2A9E1C40>]}
+[0m17:34:57.230069 [info ] [Thread-1 (]: 1 of 2 OK created sql incremental model massive_hotel.silver.staging_customer_data  [[32mSUCCESS 1[0m in 2.70s]
+[0m17:34:57.230069 [debug] [Thread-1 (]: Finished running node model.massive_hotel.staging_customer_data
+[0m17:34:57.230069 [debug] [Thread-3 (]: Began running node model.massive_hotel.customer_data
+[0m17:34:57.230069 [info ] [Thread-3 (]: 2 of 2 START sql incremental model massive_hotel.gold.customer_data ............ [RUN]
+[0m17:34:57.230069 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.massive_hotel.customer_data'
+[0m17:34:57.230069 [debug] [Thread-3 (]: Began compiling node model.massive_hotel.customer_data
+[0m17:34:57.230069 [debug] [Thread-3 (]: Writing injected SQL for node "model.massive_hotel.customer_data"
+[0m17:34:57.230069 [debug] [Thread-3 (]: Timing info for model.massive_hotel.customer_data (compile): 17:34:57.230069 => 17:34:57.230069
+[0m17:34:57.230069 [debug] [Thread-3 (]: Began executing node model.massive_hotel.customer_data
+[0m17:34:57.247076 [debug] [Thread-3 (]: Writing runtime sql for node "model.massive_hotel.customer_data"
+[0m17:34:57.247076 [debug] [Thread-3 (]: Using snowflake connection "model.massive_hotel.customer_data"
+[0m17:34:57.247076 [debug] [Thread-3 (]: On model.massive_hotel.customer_data: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "node_id": "model.massive_hotel.customer_data"} */
+create or replace transient table massive_hotel.gold.customer_data
+         as
+        (
+
+
+
+    select *
+    from massive_hotel.silver.staging_customer_data
+    qualify
+        row_number() over (
+            partition by 
+  --  Takes an input list and generates a concat() statement with each argument in the list safe_casted to a string and wrapped in an ifnull()
+  concat(
+            id
+            
+        )
+
+            order by 
+  --  Takes an input list and generates a concat() statement with each argument in the list safe_casted to a string and wrapped in an ifnull()
+  concat(
+            updated_at
+            
+        )
+
+        ) = 1
+
+
+        );
+[0m17:34:57.247076 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:34:58.984336 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m17:34:58.984336 [debug] [Thread-3 (]: Applying DROP to: massive_hotel.gold.customer_data__dbt_tmp
+[0m17:34:58.984336 [debug] [Thread-3 (]: Using snowflake connection "model.massive_hotel.customer_data"
+[0m17:34:58.984336 [debug] [Thread-3 (]: On model.massive_hotel.customer_data: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "massive_hotel", "target_name": "prod", "node_id": "model.massive_hotel.customer_data"} */
+drop view if exists massive_hotel.gold.customer_data__dbt_tmp cascade
+[0m17:34:59.084130 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m17:34:59.089087 [debug] [Thread-3 (]: Timing info for model.massive_hotel.customer_data (execute): 17:34:57.230069 => 17:34:59.088129
+[0m17:34:59.090084 [debug] [Thread-3 (]: On model.massive_hotel.customer_data: Close
+[0m17:34:59.243124 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ad8d8a85-9cb8-4e89-89cf-99d0f0e902ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F2AAD1280>]}
+[0m17:34:59.245165 [info ] [Thread-3 (]: 2 of 2 OK created sql incremental model massive_hotel.gold.customer_data ....... [[32mSUCCESS 1[0m in 2.01s]
+[0m17:34:59.246125 [debug] [Thread-3 (]: Finished running node model.massive_hotel.customer_data
+[0m17:34:59.248130 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:34:59.249130 [debug] [MainThread]: Connection 'list_massive_hotel' was properly closed.
+[0m17:34:59.250131 [debug] [MainThread]: Connection 'list_massive_hotel' was properly closed.
+[0m17:34:59.251129 [debug] [MainThread]: Connection 'list_massive_hotel_gold' was properly closed.
+[0m17:34:59.252125 [debug] [MainThread]: Connection 'list_massive_hotel_silver' was properly closed.
+[0m17:34:59.252125 [debug] [MainThread]: Connection 'model.massive_hotel.staging_customer_data' was properly closed.
+[0m17:34:59.253132 [debug] [MainThread]: Connection 'model.massive_hotel.customer_data' was properly closed.
+[0m17:34:59.253132 [info ] [MainThread]: 
+[0m17:34:59.255128 [info ] [MainThread]: Finished running 2 incremental models in 0 hours 0 minutes and 7.89 seconds (7.89s).
+[0m17:34:59.257126 [debug] [MainThread]: Command end result
+[0m17:34:59.272127 [info ] [MainThread]: 
+[0m17:34:59.273126 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:34:59.274126 [info ] [MainThread]: 
+[0m17:34:59.275126 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m17:34:59.278127 [debug] [MainThread]: Command `dbt run` succeeded at 17:34:59.277126 after 9.08 seconds
+[0m17:34:59.279127 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F27742C30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F2862F470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F2A764770>]}
+[0m17:34:59.280130 [debug] [MainThread]: Flushing usage events
